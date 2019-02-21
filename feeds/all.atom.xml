@@ -160,7 +160,7 @@ git push origin gh-pages
 &lt;h3 id="sec-3-1"&gt;Makefile&lt;/h3&gt;
 &lt;div class="outline-text-3" id="text-3-1"&gt;
 &lt;p&gt;
-　Github Pageに簡単に公開できるようにするために、
+　Github Pageに簡単に公開できるようにするために、Makefileのターゲットを追加する。
 &lt;/p&gt;
 
 &lt;div class="org-src-container"&gt;
