@@ -20,7 +20,7 @@
         <meta property="og:title" content="ペリカンさんに最速でブログを運んでもらう方法"/>
         <meta property="og:url" content="./start-pelican.html"/>
         <meta property="og:description" content="Python製の静的サイトジェネレーターであるPelicanを利用してブログを書く方法を紹介"/>
-        <meta property="article:published_time" content="2019-02-22" />
+        <meta property="article:published_time" content="2019-02-23" />
             <meta property="article:section" content="pelican" />
             <meta property="article:tag" content="Org-mode" />
             <meta property="article:tag" content="Pelican" />
@@ -95,7 +95,7 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2019-02-22T00:00:00+09:00"> 2019-02-22 (金)</time>
+        <i class="fa fa-calendar"></i><time datetime="2019-02-23T00:00:00+09:00"> 2019-02-23 (土)</time>
     </span>
 
 
@@ -132,7 +132,8 @@
 </li>
 <li><a href="#sec-4">GitHub Pagesでブログを公開する</a>
 <ul>
-<li><a href="#sec-4-1">Makefile</a></li>
+<li><a href="#sec-4-1">手動で動作確認</a></li>
+<li><a href="#sec-4-2">Makefileを編集</a></li>
 </ul>
 </li>
 </ul>
@@ -312,8 +313,20 @@ ORG_READER_EMACS_LOCATION = '/usr/bin/emacs'
 <h2 id="sec-4">GitHub Pagesでブログを公開する</h2>
 <div class="outline-text-2" id="text-4">
 <p>
+　ブログをホスティングするために、
+<a href="https://github.com/masatotoro/blog">ブログ用のリポジトリ</a>を用意し
+GitHub Pagesで公開できるようにする。
+</p>
+</div>
+
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">手動で動作確認</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
 　<a href="http://docs.getpelican.com/en/stable/tips.html#publishing-to-github">GitHubに公開する方法</a>を参考に以下のコマンドを実行する。
 </p>
+
 
 <div class="org-src-container">
 
@@ -322,12 +335,22 @@ ghp-import output -b gh-pages
 git push origin gh-pages
 </pre>
 </div>
+
+<p>
+　コマンドが成功すれば、以下のURLで公開が完了している。
+</p>
+
+<ul class="org-ul">
+<li><a href="http://masatotoro.github.io/blog/">http://masatotoro.github.io/blog/</a>
+</li>
+</ul>
+</div>
 </div>
 
 
-<div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1">Makefile</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">Makefileを編集</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 　Github Pageに簡単に公開できるようにするために、Makefileのターゲットを追加する。
 </p>
@@ -373,6 +396,9 @@ git push origin gh-pages
       <a href="./category/go.html"><i class="fa fa-folder-open fa-lg"></i>go</a>
     </li>
     <li class="list-group-item">
+      <a href="./category/pandoc.html"><i class="fa fa-folder-open fa-lg"></i>pandoc</a>
+    </li>
+    <li class="list-group-item">
       <a href="./category/pelican.html"><i class="fa fa-folder-open fa-lg"></i>pelican</a>
     </li>
     <li class="list-group-item">
@@ -395,7 +421,7 @@ git push origin gh-pages
     <li class="list-group-item tag-1">
       <a href="./tag/org-mode.html">Org-mode</a>
     </li>
-    <li class="list-group-item tag-4">
+    <li class="list-group-item tag-1">
       <a href="./tag/pandoc.html">Pandoc</a>
     </li>
     <li class="list-group-item tag-4">
