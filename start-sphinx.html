@@ -55,7 +55,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                          <li><a href="./pages/about.html">
-                             About Page
+                             About
                           </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -115,7 +115,8 @@
 <ul>
 <li><a href="#sec-1">スフィンクスを導入する</a></li>
 <li><a href="#sec-2">スフィンクスのテーマを設定する</a></li>
-<li><a href="#sec-3">GitHub Pagesでドキュメントを公開する</a></li>
+<li><a href="#sec-3">Pandocでフォーマットを変換する</a></li>
+<li><a href="#sec-4">GitHub Pagesでドキュメントを公開する</a></li>
 </ul>
 </div>
 </div>
@@ -134,6 +135,10 @@ Sphinxでビルドしてドキュメントを作成する。
 <div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1">スフィンクスを導入する</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+pipを利用し、必要となるアプリをインストールします。
+</p>
+
 <div class="org-src-container">
 
 <pre class="src src-sh">sudo -H pip3 install sphinx
@@ -142,14 +147,33 @@ sudo -H pip3 install sphinx_rtd_theme
 pip3 show sphinx_rtd_theme
 </pre>
 </div>
+
+<p>
+インストールできたアプリのバージョンを確認する。
+</p>
 </div>
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
 <h2 id="sec-2">スフィンクスのテーマを設定する</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+設定ファイルにテーマを指定する。
+</p>
 </div>
+</div>
+
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">GitHub Pagesでドキュメントを公開する</h2>
+<h2 id="sec-3">Pandocでフォーマットを変換する</h2>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">GitHub Pagesでドキュメントを公開する</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Makefileに以下の設定を追加します。
+</p>
+</div>
 </div>
 
             </div>
@@ -203,6 +227,9 @@ pip3 show sphinx_rtd_theme
     </li>
     <li class="list-group-item tag-1">
       <a href="./tag/org-mode.html">Org-mode</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/pandoc.html">Pandoc</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/pelican.html">Pelican</a>
