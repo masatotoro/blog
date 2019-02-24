@@ -20,7 +20,7 @@
         <meta property="og:title" content="ペリカンさんに最速でブログを運んでもらう方法"/>
         <meta property="og:url" content="./start-pelican.html"/>
         <meta property="og:description" content="Python製の静的サイトジェネレーターであるPelicanを利用してブログを書く方法を紹介"/>
-        <meta property="article:published_time" content="2019-02-23" />
+        <meta property="article:published_time" content="2019-02-25" />
             <meta property="article:section" content="pelican" />
             <meta property="article:tag" content="Org-mode" />
             <meta property="article:tag" content="Pelican" />
@@ -95,7 +95,7 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2019-02-23T00:00:00+09:00"> 2019-02-23 (土)</time>
+        <i class="fa fa-calendar"></i><time datetime="2019-02-25T00:00:00+09:00"> 2019-02-25 (月)</time>
     </span>
 
 
@@ -119,21 +119,22 @@
 <li><a href="#sec-1-2">ペリカンのプラグインとテーマを取得</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">ペリカンのテーマを設定する</a>
+<li><a href="#sec-2">ペリカンでブログを作成する</a></li>
+<li><a href="#sec-3">ペリカンのテーマを設定する</a>
 <ul>
-<li><a href="#sec-2-1">ペリカンのテーマを確認</a></li>
-<li><a href="#sec-2-2">ブログにテーマの適用</a></li>
+<li><a href="#sec-3-1">ペリカンのテーマを確認</a></li>
+<li><a href="#sec-3-2">ブログにテーマの適用</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">ペリカンのプラグイン設定</a>
+<li><a href="#sec-4">ペリカンのプラグイン設定する</a>
 <ul>
-<li><a href="#sec-3-1">Org-modeで記事を書く</a></li>
+<li><a href="#sec-4-1">Org-modeで記事を書く</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">GitHub Pagesでブログを公開する</a>
+<li><a href="#sec-5">GitHub Pagesでブログを公開する</a>
 <ul>
-<li><a href="#sec-4-1">手動で動作確認</a></li>
-<li><a href="#sec-4-2">Makefileを編集</a></li>
+<li><a href="#sec-5-1">手動で動作確認</a></li>
+<li><a href="#sec-5-2">Makefileを編集</a></li>
 </ul>
 </li>
 </ul>
@@ -240,11 +241,14 @@ git clone https://github.com/getpelican/pelican-plugins.git
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">ペリカンのテーマを設定する</h2>
-<div class="outline-text-2" id="text-2">
-</div><div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">ペリカンのテーマを確認</h3>
-<div class="outline-text-3" id="text-2-1">
+<h2 id="sec-2">ペリカンでブログを作成する</h2>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">ペリカンのテーマを設定する</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">ペリカンのテーマを確認</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
 　<a href="http://www.pelicanthemes.com/">ペリカンのテーマ一覧</a>を確認し、
 <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a>
@@ -254,9 +258,9 @@ git clone https://github.com/getpelican/pelican-plugins.git
 </div>
 
 
-<div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2">ブログにテーマの適用</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">ブログにテーマの適用</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
 以下のディレクトリで、以下のコマンドを実行して
 テーマのインストールを行う。
@@ -286,12 +290,12 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">ペリカンのプラグイン設定</h2>
-<div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">Org-modeで記事を書く</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">ペリカンのプラグイン設定する</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Org-modeで記事を書く</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 　EmacsのOrg-mode記法で記事を書くために設定ファイル
 (<code>pelicanconf.py</code>)に以下を記載する。
@@ -305,13 +309,9 @@ ORG_READER_EMACS_LOCATION = '/usr/bin/emacs'
 </div>
 </div>
 
-
-
-
-
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">GitHub Pagesでブログを公開する</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">GitHub Pagesでブログを公開する</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 　ブログをホスティングするために、
 <a href="https://github.com/masatotoro/blog">ブログ用のリポジトリ</a>を用意し
@@ -320,9 +320,9 @@ GitHub Pagesで公開できるようにする。
 </div>
 
 
-<div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1">手動で動作確認</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1">手動で動作確認</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
 　<a href="http://docs.getpelican.com/en/stable/tips.html#publishing-to-github">GitHubに公開する方法</a>を参考に以下のコマンドを実行する。
 </p>
@@ -348,9 +348,9 @@ git push origin gh-pages
 </div>
 
 
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2">Makefileを編集</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2">Makefileを編集</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 　Github Pageに簡単に公開できるようにするために、Makefileのターゲットを追加する。
 </p>
