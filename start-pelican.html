@@ -12,7 +12,7 @@
 <link rel="canonical" href="./start-pelican.html">
 
         <meta name="author" content="masatotoro" />
-        <meta name="keywords" content="Org-mode,Pelican" />
+        <meta name="keywords" content="Org-mode,Pelican,Blog" />
         <meta name="description" content="Python製の静的サイトジェネレーターであるPelicanを利用してブログを書く方法を紹介" />
 
         <meta property="og:site_name" content="ぺりかんブログ" />
@@ -24,6 +24,7 @@
             <meta property="article:section" content="pelican" />
             <meta property="article:tag" content="Org-mode" />
             <meta property="article:tag" content="Pelican" />
+            <meta property="article:tag" content="Blog" />
             <meta property="article:author" content="masatotoro" />
 
 
@@ -106,6 +107,8 @@
 	<a href="./tag/org-mode.html">Org-mode</a>
         /
 	<a href="./tag/pelican.html">Pelican</a>
+        /
+	<a href="./tag/blog.html">Blog</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -152,6 +155,12 @@ Org-modeユーザーのための<a href="https://orgmode.org/worg/org-blog-wiki.
 そして、巡り巡って<a href="https://www.staticgen.com/pelican">Pelican</a>（以下、ペリカン）で本ブログを構築できることを発見した。
 </p>
 
+
+<div class="figure">
+<p><img src="../images/animal_pelican.png" alt="animal_pelican.png" />
+</p>
+</div>
+
 <p>
 　<a href="https://www.staticgen.com/pelican">ペリカン</a>とは、Python製の静的サイトジェネレーターでブログを作成するツールである。
 GitHub Pagesで<a href="https://masatotoro.github.io/blog/">本ブログ</a>を公開するまで手順を記録として残しておく。
@@ -174,15 +183,14 @@ GitHub Pagesで<a href="https://masatotoro.github.io/blog/">本ブログ</a>を�
 　以下のコマンドを利用し、
 <code>pelican</code>
 ・
-<code>markdown</code>
-・
 <code>ghp-import</code>
 をダウンロードする。
 </p>
 
 <div class="org-src-container">
 
-<pre class="src src-sh">sudo -H pip3 install pelican markdown ghp-import
+<pre class="src src-sh">sudo -H pip3 install pelican
+sudo -H pip3 install ghp-import
 </pre>
 </div>
 </div>
@@ -412,6 +420,9 @@ git push origin gh-pages
 <li class="list-group-item">
   <a href="./"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
   <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-1">
+      <a href="./tag/blog.html">Blog</a>
+    </li>
     <li class="list-group-item tag-4">
       <a href="./tag/go.html">Go</a>
     </li>
