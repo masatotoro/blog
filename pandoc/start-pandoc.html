@@ -20,7 +20,7 @@
         <meta property="og:title" content="Pandocでドキュメントを変換する方法"/>
         <meta property="og:url" content="../pandoc/start-pandoc.html"/>
         <meta property="og:description" content="Pandocでドキュメントのフォーマットを変換する方法を紹介"/>
-        <meta property="article:published_time" content="2019-02-25" />
+        <meta property="article:published_time" content="2019-03-03" />
             <meta property="article:section" content="pandoc" />
             <meta property="article:tag" content="Pandoc" />
             <meta property="article:author" content="masatotoro" />
@@ -94,7 +94,7 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2019-02-25T00:00:00+09:00"> 2019-02-25 (月)</time>
+        <i class="fa fa-calendar"></i><time datetime="2019-03-03T00:00:00+09:00"> 2019-03-03 (日)</time>
     </span>
 
 
@@ -110,15 +110,16 @@
 <h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4784434">Pandocとは</a></li>
-<li><a href="#orgfe73325">Pandocのインストール</a></li>
+<li><a href="#org8cd60d0">Pandocとは</a></li>
+<li><a href="#orgacd627e">Pandocのインストール</a></li>
+<li><a href="#orgf81cec6">Pandocの変換の確認</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org4784434" class="outline-2">
-<h2 id="org4784434">Pandocとは</h2>
-<div class="outline-text-2" id="text-org4784434">
+<div id="outline-container-org8cd60d0" class="outline-2">
+<h2 id="org8cd60d0">Pandocとは</h2>
+<div class="outline-text-2" id="text-org8cd60d0">
 <p>
 　<a href="https://pandoc.org/">Pandoc</a>とは、ドキュメントのフォーマットを変換するツールである。
 以下の特徴を有している。
@@ -131,9 +132,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgfe73325" class="outline-2">
-<h2 id="orgfe73325">Pandocのインストール</h2>
-<div class="outline-text-2" id="text-orgfe73325">
+<div id="outline-container-orgacd627e" class="outline-2">
+<h2 id="orgacd627e">Pandocのインストール</h2>
+<div class="outline-text-2" id="text-orgacd627e">
 <p>
 　最新のPandocは、
 <a href="https://github.com/jgm/pandoc/releases">リリースページ</a>
@@ -152,6 +153,36 @@ Web:  http://pandoc.org
 This is free software; see the source for copying conditions.
 There is no warranty, not even for merchantability or fitness
 for a particular purpose.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgf81cec6" class="outline-2">
+<h2 id="orgf81cec6">Pandocの変換の確認</h2>
+<div class="outline-text-2" id="text-orgf81cec6">
+<p>
+　以下の関数を定義し、コマンドを実行すること。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">CONVERT_TO_HTML</span>(){
+  cat - | pandoc --from org --to html
+  <span style="font-weight: bold;">return</span> 0
+}
+</pre>
+</div>
+
+<p>
+　実行すると、任意のフォーマットに変更が可能。
+</p>
+
+<pre class="example">
+$ cat &lt;&lt;EOF | CONVERT_TO_HTML
+&gt; * aa
+&gt; bb
+&gt; EOF
+&lt;h1 id="aa"&gt;aa&lt;/h1&gt;
+&lt;p&gt;bb&lt;/p&gt;
 </pre>
 </div>
 </div>
