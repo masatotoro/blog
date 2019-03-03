@@ -20,7 +20,7 @@
         <meta property="og:title" content="スフィンクスさんにドキュメントを見守ってもらう方法"/>
         <meta property="og:url" content="../sphinx/start-sphinx.html"/>
         <meta property="og:description" content="Python製のSphinxでドキュメントを作成する方法を紹介"/>
-        <meta property="article:published_time" content="2019-02-25" />
+        <meta property="article:published_time" content="2019-03-03" />
             <meta property="article:section" content="sphinx" />
             <meta property="article:tag" content="Org-mode" />
             <meta property="article:tag" content="Sphinx" />
@@ -95,7 +95,7 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2019-02-25T00:00:00+09:00"> 2019-02-25 (月)</time>
+        <i class="fa fa-calendar"></i><time datetime="2019-03-03T00:00:00+09:00"> 2019-03-03 (日)</time>
     </span>
 
 
@@ -113,13 +113,19 @@
 <h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6d22db9">スフィンクスを導入する</a></li>
-<li><a href="#orga300dc2">スフィンクスのテーマを設定する</a></li>
-<li><a href="#org3e73b4f">Pandocでフォーマットを変換する</a></li>
-<li><a href="#org005a7bc">GitHub Pagesでドキュメントを公開する</a></li>
+<li><a href="#org2a09aa7">スフィンクスの紹介</a></li>
+<li><a href="#orgd8efcb7">スフィンクスを導入する</a></li>
+<li><a href="#org9dafdcc">スフィンクスのテーマを設定する</a></li>
+<li><a href="#orgfd1b504">Pandocでフォーマットを変換する</a></li>
+<li><a href="#orgcc48bd4">GitHub Pagesでドキュメントを公開する</a></li>
 </ul>
 </div>
 </div>
+
+
+<div id="outline-container-org2a09aa7" class="outline-2">
+<h2 id="org2a09aa7">スフィンクスの紹介</h2>
+<div class="outline-text-2" id="text-org2a09aa7">
 <p>
 　体系的なドキュメントをまとめたいとき、
 <a href="https://www.sphinx-doc.org/">Sphinx</a>（以下、スフィンクス）は有力な選択肢になる。
@@ -136,11 +142,13 @@
 Pandocと連携してRSTに変換し、
 Sphinxでビルドしてドキュメントを作成する。
 </p>
+</div>
+</div>
 
 
-<div id="outline-container-org6d22db9" class="outline-2">
-<h2 id="org6d22db9">スフィンクスを導入する</h2>
-<div class="outline-text-2" id="text-org6d22db9">
+<div id="outline-container-orgd8efcb7" class="outline-2">
+<h2 id="orgd8efcb7">スフィンクスを導入する</h2>
+<div class="outline-text-2" id="text-orgd8efcb7">
 <p>
 pipを利用し、必要となるアプリをインストールします。
 </p>
@@ -159,22 +167,22 @@ pip3 show sphinx_rtd_theme
 </div>
 </div>
 
-<div id="outline-container-orga300dc2" class="outline-2">
-<h2 id="orga300dc2">スフィンクスのテーマを設定する</h2>
-<div class="outline-text-2" id="text-orga300dc2">
+<div id="outline-container-org9dafdcc" class="outline-2">
+<h2 id="org9dafdcc">スフィンクスのテーマを設定する</h2>
+<div class="outline-text-2" id="text-org9dafdcc">
 <p>
 設定ファイルにテーマを指定する。
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3e73b4f" class="outline-2">
-<h2 id="org3e73b4f">Pandocでフォーマットを変換する</h2>
+<div id="outline-container-orgfd1b504" class="outline-2">
+<h2 id="orgfd1b504">Pandocでフォーマットを変換する</h2>
 </div>
 
-<div id="outline-container-org005a7bc" class="outline-2">
-<h2 id="org005a7bc">GitHub Pagesでドキュメントを公開する</h2>
-<div class="outline-text-2" id="text-org005a7bc">
+<div id="outline-container-orgcc48bd4" class="outline-2">
+<h2 id="orgcc48bd4">GitHub Pagesでドキュメントを公開する</h2>
+<div class="outline-text-2" id="text-orgcc48bd4">
 <p>
 Makefileに以下の設定を追加します。
 </p>
@@ -236,7 +244,7 @@ Makefileに以下の設定を追加します。
     <li class="list-group-item tag-2">
       <a href="../tag/blog.html">Blog</a>
     </li>
-    <li class="list-group-item tag-2">
+    <li class="list-group-item tag-1">
       <a href="../tag/emacs.html">Emacs</a>
     </li>
     <li class="list-group-item tag-4">
@@ -249,7 +257,7 @@ Makefileに以下の設定を追加します。
       <a href="../tag/java.html">Java</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="../tag/org-mode.html">Org-mode</a>
+      <a href="../tag/org-mode.html">org-mode</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="../tag/pandoc.html">Pandoc</a>
