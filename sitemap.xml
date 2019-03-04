@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>masatotoro.github.io/</loc>
-<lastmod>2019-03-04T13:56:53-00:00</lastmod>
+<lastmod>2019-03-04T18:50:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>masatotoro.github.io/archives.html</loc>
-<lastmod>2019-03-04T13:56:53-00:00</lastmod>
+<lastmod>2019-03-04T18:50:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>masatotoro.github.io/tags.html</loc>
-<lastmod>2019-03-04T13:56:53-00:00</lastmod>
+<lastmod>2019-03-04T18:50:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>masatotoro.github.io/categories.html</loc>
-<lastmod>2019-03-04T13:56:53-00:00</lastmod>
+<lastmod>2019-03-04T18:50:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,15 +60,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>masatotoro.github.io/pelican/start-pelican.html</loc>
+<loc>masatotoro.github.io/emacs/org-mode-html.html</loc>
 <lastmod>2019-03-04T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>masatotoro.github.io/emacs/org-mode-html.html</loc>
-<lastmod>2019-03-03T00:00:00+09:00</lastmod>
+<loc>masatotoro.github.io/pelican/start-pelican.html</loc>
+<lastmod>2019-03-04T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Emacsで自動で日付を付与する方法 - ぺりかんブログ</title>
+    <title>Emacsで自動で日付を更新する方法 - ぺりかんブログ</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -13,13 +13,13 @@
 
         <meta name="author" content="masatotoro" />
         <meta name="keywords" content="Emacs,org-mode" />
-        <meta name="description" content="Emacsで日付を自動で更新する方法を紹介" />
+        <meta name="description" content="ファイル保存時に日付を自動で更新するEmacsの設定方法を紹介" />
 
         <meta property="og:site_name" content="ぺりかんブログ" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Emacsで自動で日付を付与する方法"/>
+        <meta property="og:title" content="Emacsで自動で日付を更新する方法"/>
         <meta property="og:url" content="../emacs/auto-timestamp.html"/>
-        <meta property="og:description" content="Emacsで日付を自動で更新する方法を紹介"/>
+        <meta property="og:description" content="ファイル保存時に日付を自動で更新するEmacsの設定方法を紹介"/>
         <meta property="article:published_time" content="2019-03-04" />
             <meta property="article:section" content="emacs" />
             <meta property="article:tag" content="Emacs" />
@@ -76,7 +76,7 @@
             <ol class="breadcrumb">
                 <li><a href=".." title="ぺりかんブログ"><i class="fa fa-home fa-lg"></i></a></li>
                 <li><a href="../category/emacs.html" title="emacs">emacs</a></li>
-                <li class="active">Emacsで自動で日付を付与する方法</li>
+                <li class="active">Emacsで自動で日付を更新する方法</li>
             </ol>
     <section id="content">
         <article>
@@ -84,8 +84,8 @@
                 <h1>
                     <a href="../emacs/auto-timestamp.html"
                        rel="bookmark"
-                       title="Permalink to Emacsで自動で日付を付与する方法">
-                        Emacsで自動で日付を付与する方法
+                       title="Permalink to Emacsで自動で日付を更新する方法">
+                        Emacsで自動で日付を更新する方法
                     </a>
                 </h1>
             </header>
@@ -113,20 +113,25 @@
 <h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1d806b0">ペリカンの日付のメタ情報</a></li>
-<li><a href="#orgf5c1b26">Org-modeファイルの基本メタ情報</a></li>
-<li><a href="#org61cba53">自動で日付を更新する設定方法</a></li>
-<li><a href="#org868d56e">ペリカンブログの記事更新</a></li>
+<li><a href="#org43130cf">ペリカンの日付のメタ情報</a></li>
+<li><a href="#org3a2d27e">Org-modeファイルの基本メタ情報</a></li>
+<li><a href="#orga5351d4">自動で日付を更新する設定方法</a></li>
+<li><a href="#org23ea664">ペリカンブログの記事更新</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1d806b0" class="outline-2">
-<h2 id="org1d806b0">ペリカンの日付のメタ情報</h2>
-<div class="outline-text-2" id="text-org1d806b0">
+<div id="outline-container-org43130cf" class="outline-2">
+<h2 id="org43130cf">ペリカンの日付のメタ情報</h2>
+<div class="outline-text-2" id="text-org43130cf">
 <p>
-　ペリカンで記事を書くときは、
+　ペリカンで記事を書くとき、
 <a href="https://docs.getpelican.com/en/stable/content.html#file-metadata">ファイルのメタ情報</a>として以下の項目を設定することが可能である。
+</p>
+
+<p>
+　reStructuredTextフォーマットで記述されているファイルでは、
+以下のように設定される。
 </p>
 
 <pre class="example">
@@ -136,30 +141,29 @@
 </div>
 </div>
 
-<div id="outline-container-orgf5c1b26" class="outline-2">
-<h2 id="orgf5c1b26">Org-modeファイルの基本メタ情報</h2>
-<div class="outline-text-2" id="text-orgf5c1b26">
+<div id="outline-container-org3a2d27e" class="outline-2">
+<h2 id="org3a2d27e">Org-modeファイルの基本メタ情報</h2>
+<div class="outline-text-2" id="text-org3a2d27e">
 <p>
-　ぺりかんブログでは、
-EmacsのOrg-modeで原稿を書いている。
-そして、日付はOrg-modeの基本メタ情報である <code>#+DATE:</code> を設定している。
+　<a href="https://masatotoro.github.io/blog/">ぺりかんブログ</a>は、EmacsのOrg-modeフォーマットで原稿を用意おり、
+日付はOrg-modeの基本メタ情報である <code>#+DATE:</code> を設定している。
 </p>
 
 <pre class="example">
-#+DATE: 
+#+DATE: 2019-03-04
 </pre>
 
 <p>
-　そして、 <code>#+DATE:</code> の設定がブログの作成日として表示される。
-されに、記事は作成日順にソートされて表示される。
+　ブログの作成日として、 <code>#+DATE:</code> で設定した日付が表示される。
+そして、記事は作成日順に並んで表示されることになる。
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org61cba53" class="outline-2">
-<h2 id="org61cba53">自動で日付を更新する設定方法</h2>
-<div class="outline-text-2" id="text-org61cba53">
+<div id="outline-container-orga5351d4" class="outline-2">
+<h2 id="orga5351d4">自動で日付を更新する設定方法</h2>
+<div class="outline-text-2" id="text-orga5351d4">
 <p>
 　Emacs設定ファイル(<code>init.el</code>)に以下の設定を行う。
 すると、ファイル保存時に日付を自動で更新することが可能となる。
@@ -183,9 +187,9 @@ EmacsのOrg-modeで原稿を書いている。
 </div>
 
 
-<div id="outline-container-org868d56e" class="outline-2">
-<h2 id="org868d56e">ペリカンブログの記事更新</h2>
-<div class="outline-text-2" id="text-org868d56e">
+<div id="outline-container-org23ea664" class="outline-2">
+<h2 id="org23ea664">ペリカンブログの記事更新</h2>
+<div class="outline-text-2" id="text-org23ea664">
 <p>
 　実際にブログ書いてみて、初回公開で記事を完成することは難しい。
 過去の記事を読み返し、加筆修正する作業を行うことで、
