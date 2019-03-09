@@ -12,7 +12,7 @@
 <link rel="canonical" href="../emacs/auto-timestamp.html">
 
         <meta name="author" content="masatotoro" />
-        <meta name="keywords" content="Emacs,org-mode" />
+        <meta name="keywords" content="Emacs,org-mode,Pelican" />
         <meta name="description" content="ファイル保存時に日付を自動で更新するEmacsの設定方法を紹介" />
 
         <meta property="og:site_name" content="ぺりかんブログ" />
@@ -20,10 +20,11 @@
         <meta property="og:title" content="Emacsで自動で日付を更新する方法"/>
         <meta property="og:url" content="../emacs/auto-timestamp.html"/>
         <meta property="og:description" content="ファイル保存時に日付を自動で更新するEmacsの設定方法を紹介"/>
-        <meta property="article:published_time" content="2019-03-04" />
+        <meta property="article:published_time" content="2019-03-09" />
             <meta property="article:section" content="emacs" />
             <meta property="article:tag" content="Emacs" />
             <meta property="article:tag" content="org-mode" />
+            <meta property="article:tag" content="Pelican" />
             <meta property="article:author" content="masatotoro" />
 
 
@@ -95,7 +96,7 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2019-03-04T00:00:00+09:00"> 2019-03-04 (月)</time>
+        <i class="fa fa-calendar"></i><time datetime="2019-03-09T00:00:00+09:00"> 2019-03-09 (土)</time>
     </span>
 
 
@@ -106,6 +107,8 @@
 	<a href="../tag/emacs.html">Emacs</a>
         /
 	<a href="../tag/org-mode.html">org-mode</a>
+        /
+	<a href="../tag/pelican.html">Pelican</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -113,40 +116,37 @@
 <h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org43130cf">ペリカンの日付のメタ情報</a></li>
-<li><a href="#org3a2d27e">Org-modeファイルの基本メタ情報</a></li>
-<li><a href="#orga5351d4">自動で日付を更新する設定方法</a></li>
-<li><a href="#org23ea664">ペリカンブログの記事更新</a></li>
+<li><a href="#org2edb738">ペリカンの日付のメタ情報</a></li>
+<li><a href="#org1d967b2">Org-modeファイルの基本メタ情報</a></li>
+<li><a href="#org36a7fa5">自動で日付を更新する設定方法</a></li>
+<li><a href="#org2bb2dff">ペリカンブログの記事更新</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org43130cf" class="outline-2">
-<h2 id="org43130cf">ペリカンの日付のメタ情報</h2>
-<div class="outline-text-2" id="text-org43130cf">
+<div id="outline-container-org2edb738" class="outline-2">
+<h2 id="org2edb738">ペリカンの日付のメタ情報</h2>
+<div class="outline-text-2" id="text-org2edb738">
 <p>
-　ペリカンで記事を書くとき、
-<a href="https://docs.getpelican.com/en/stable/content.html#file-metadata">ファイルのメタ情報</a>として以下の項目を設定することが可能である。
-</p>
-
-<p>
-　reStructuredTextフォーマットで記述されているファイルでは、
-以下のように設定される。
+　ペリカンでブログの記事を書くとき、
+記事の発行日を指定することができる。
+reStructuredTextフォーマットのファイルでは、
+<a href="https://docs.getpelican.com/en/stable/content.html#file-metadata">ファイルのメタ情報</a>として以下の項目を設定する方法が紹介されている。
 </p>
 
 <pre class="example">
 :date: 2010-10-03 10:20
-:modified: 2010-10-04 18:40
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org3a2d27e" class="outline-2">
-<h2 id="org3a2d27e">Org-modeファイルの基本メタ情報</h2>
-<div class="outline-text-2" id="text-org3a2d27e">
+<div id="outline-container-org1d967b2" class="outline-2">
+<h2 id="org1d967b2">Org-modeファイルの基本メタ情報</h2>
+<div class="outline-text-2" id="text-org1d967b2">
 <p>
-　<a href="https://masatotoro.github.io/blog/">ぺりかんブログ</a>は、EmacsのOrg-modeフォーマットで原稿を用意おり、
-日付はOrg-modeの基本メタ情報である <code>#+DATE:</code> を設定している。
+　<a href="https://masatotoro.github.io/blog/">ぺりかんブログ</a>は、EmacsのOrg-modeフォーマットで
+原稿を用意しており、
+日付はOrg-modeのオプションである <code>#+DATE:</code> を設定する。
 </p>
 
 <pre class="example">
@@ -155,15 +155,15 @@
 
 <p>
 　ブログの作成日として、 <code>#+DATE:</code> で設定した日付が表示される。
-そして、記事は作成日順に並んで表示されることになる。
+そして、記事は作成日順に並んで表示される。
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orga5351d4" class="outline-2">
-<h2 id="orga5351d4">自動で日付を更新する設定方法</h2>
-<div class="outline-text-2" id="text-orga5351d4">
+<div id="outline-container-org36a7fa5" class="outline-2">
+<h2 id="org36a7fa5">自動で日付を更新する設定方法</h2>
+<div class="outline-text-2" id="text-org36a7fa5">
 <p>
 　Emacs設定ファイル(<code>init.el</code>)に以下の設定を行う。
 すると、ファイル保存時に日付を自動で更新することが可能となる。
@@ -187,9 +187,9 @@
 </div>
 
 
-<div id="outline-container-org23ea664" class="outline-2">
-<h2 id="org23ea664">ペリカンブログの記事更新</h2>
-<div class="outline-text-2" id="text-org23ea664">
+<div id="outline-container-org2bb2dff" class="outline-2">
+<h2 id="org2bb2dff">ペリカンブログの記事更新</h2>
+<div class="outline-text-2" id="text-org2bb2dff">
 <p>
 　実際にブログ書いてみて、初回公開で記事を完成することは難しい。
 過去の記事を読み返し、加筆修正する作業を行うことで、
@@ -231,6 +231,9 @@
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
   <ul class="list-group" id="categories">
     <li class="list-group-item">
+      <a href="../category/book.html"><i class="fa fa-folder-open fa-lg"></i>book</a>
+    </li>
+    <li class="list-group-item">
       <a href="../category/emacs.html"><i class="fa fa-folder-open fa-lg"></i>emacs</a>
     </li>
     <li class="list-group-item">
@@ -271,13 +274,13 @@
     <li class="list-group-item tag-4">
       <a href="../tag/java.html">Java</a>
     </li>
-    <li class="list-group-item tag-1">
+    <li class="list-group-item tag-0">
       <a href="../tag/org-mode.html">org-mode</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="../tag/pandoc.html">Pandoc</a>
     </li>
-    <li class="list-group-item tag-4">
+    <li class="list-group-item tag-2">
       <a href="../tag/pelican.html">Pelican</a>
     </li>
     <li class="list-group-item tag-4">
