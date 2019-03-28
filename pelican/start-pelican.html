@@ -116,33 +116,33 @@
 <h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7cb7c7f">ペリカンとの出会い</a>
+<li><a href="#org2fddd1a">ペリカンとの出会い</a>
 <ul>
-<li><a href="#org02530a0">ペリカンの公式ドキュメント</a></li>
+<li><a href="#org08042ba">ペリカンの公式ドキュメント</a></li>
 </ul>
 </li>
-<li><a href="#orgb9bc21c">ペリカンを導入する</a>
+<li><a href="#orgdcb893c">ペリカンを導入する</a>
 <ul>
-<li><a href="#orga90d85e">ペリカンのインストール</a></li>
-<li><a href="#org275edaf">ペリカンのプラグインとテーマを取得</a></li>
+<li><a href="#org861774d">ペリカンのインストール</a></li>
+<li><a href="#orgb24c36c">ペリカンのプラグインとテーマを取得</a></li>
 </ul>
 </li>
-<li><a href="#org8ac1a49">ペリカンでブログを作成する</a></li>
-<li><a href="#org9aa2fcd">ペリカンのテーマを設定する</a>
+<li><a href="#org42f8ba4">ペリカンでブログを作成する</a></li>
+<li><a href="#org6892516">ペリカンのテーマを設定する</a>
 <ul>
-<li><a href="#org6cf476c">ペリカンのテーマを確認</a></li>
-<li><a href="#org447995b">ブログにテーマの適用</a></li>
+<li><a href="#orgc8e48c6">ペリカンのテーマを確認</a></li>
+<li><a href="#org5345468">ブログにテーマの適用</a></li>
 </ul>
 </li>
-<li><a href="#org53486e4">ペリカンのプラグイン設定する</a>
+<li><a href="#org41e6989">ペリカンのプラグイン設定する</a>
 <ul>
-<li><a href="#org52270a4">Org-modeで記事を書く</a></li>
+<li><a href="#orgdd3d589">Org-modeで記事を書く</a></li>
 </ul>
 </li>
-<li><a href="#org863a04d">GitHub Pagesでブログを公開する</a>
+<li><a href="#org66ac959">GitHub Pagesでブログを公開する</a>
 <ul>
-<li><a href="#org87f0bf3">手動で動作確認</a></li>
-<li><a href="#org1f21f7b">Makefileを編集</a></li>
+<li><a href="#org7b0af26">手動で動作確認</a></li>
+<li><a href="#org6cb47f3">Makefileを編集</a></li>
 </ul>
 </li>
 </ul>
@@ -150,9 +150,9 @@
 </div>
 
 
-<div id="outline-container-org7cb7c7f" class="outline-2">
-<h2 id="org7cb7c7f">ペリカンとの出会い</h2>
-<div class="outline-text-2" id="text-org7cb7c7f">
+<div id="outline-container-org2fddd1a" class="outline-2">
+<h2 id="org2fddd1a">ペリカンとの出会い</h2>
+<div class="outline-text-2" id="text-org2fddd1a">
 <p>
 　私は、<a href="https://www.gnu.org/software/emacs/">Emacs</a>のOrg-modeを愛用している。
 Org-modeユーザーのための<a href="https://orgmode.org/worg/org-blog-wiki.html">ブログを書くツール</a>を調査したが、
@@ -177,9 +177,9 @@ GitHub Pagesで<a href="https://masatotoro.github.io/blog/">本ブログ</a>を�
 </p>
 </div>
 
-<div id="outline-container-org02530a0" class="outline-3">
-<h3 id="org02530a0">ペリカンの公式ドキュメント</h3>
-<div class="outline-text-3" id="text-org02530a0">
+<div id="outline-container-org08042ba" class="outline-3">
+<h3 id="org08042ba">ペリカンの公式ドキュメント</h3>
+<div class="outline-text-3" id="text-org08042ba">
 <p>
 　不明点に関しては、
 <a href="https://docs.getpelican.com/en/stable/">ペリカンの公式ドキュメント</a>
@@ -189,9 +189,9 @@ GitHub Pagesで<a href="https://masatotoro.github.io/blog/">本ブログ</a>を�
 </div>
 </div>
 
-<div id="outline-container-orgb9bc21c" class="outline-2">
-<h2 id="orgb9bc21c">ペリカンを導入する</h2>
-<div class="outline-text-2" id="text-orgb9bc21c">
+<div id="outline-container-orgdcb893c" class="outline-2">
+<h2 id="orgdcb893c">ペリカンを導入する</h2>
+<div class="outline-text-2" id="text-orgdcb893c">
 <p>
 　はじめに、ペリカンでブログを作成＆公開するために
 必要なライブラリを <code>pip</code> を利用してインストールする。
@@ -199,9 +199,9 @@ GitHub Pagesで<a href="https://masatotoro.github.io/blog/">本ブログ</a>を�
 </p>
 </div>
 
-<div id="outline-container-orga90d85e" class="outline-3">
-<h3 id="orga90d85e">ペリカンのインストール</h3>
-<div class="outline-text-3" id="text-orga90d85e">
+<div id="outline-container-org861774d" class="outline-3">
+<h3 id="org861774d">ペリカンのインストール</h3>
+<div class="outline-text-3" id="text-org861774d">
 <p>
 　以下のコマンドを利用し、
 <code>pelican</code>
@@ -217,9 +217,9 @@ sudo -H pip3 install ghp-import
 </div>
 </div>
 
-<div id="outline-container-orgc3c1c4b" class="outline-4">
-<h4 id="orgc3c1c4b">インストールできていることを確認</h4>
-<div class="outline-text-4" id="text-orgc3c1c4b">
+<div id="outline-container-orgc1b6151" class="outline-4">
+<h4 id="orgc1b6151">インストールできていることを確認</h4>
+<div class="outline-text-4" id="text-orgc1b6151">
 <p>
 　インストールできた <code>pelican</code> の情報を確認した結果を記録する。
 </p>
@@ -242,9 +242,9 @@ Required-by:
 </div>
 
 
-<div id="outline-container-org275edaf" class="outline-3">
-<h3 id="org275edaf">ペリカンのプラグインとテーマを取得</h3>
-<div class="outline-text-3" id="text-org275edaf">
+<div id="outline-container-orgb24c36c" class="outline-3">
+<h3 id="orgb24c36c">ペリカンのプラグインとテーマを取得</h3>
+<div class="outline-text-3" id="text-orgb24c36c">
 <p>
 　GitHubからペリカン用のテーマとプラグインを導入する。
 <code>/opt/pelican</code> 以下にダウンロードするようにしている。
@@ -259,9 +259,9 @@ git clone https://github.com/getpelican/pelican-plugins.git
 </div>
 </div>
 
-<div id="outline-container-org8ac1a49" class="outline-2">
-<h2 id="org8ac1a49">ペリカンでブログを作成する</h2>
-<div class="outline-text-2" id="text-org8ac1a49">
+<div id="outline-container-org42f8ba4" class="outline-2">
+<h2 id="org42f8ba4">ペリカンでブログを作成する</h2>
+<div class="outline-text-2" id="text-org42f8ba4">
 <p>
 　ペリカンでブログを作成するために、
 <code>pelican-quickstart</code>
@@ -300,13 +300,13 @@ optional arguments:
 </div>
 </div>
 </div>
-<div id="outline-container-org9aa2fcd" class="outline-2">
-<h2 id="org9aa2fcd">ペリカンのテーマを設定する</h2>
-<div class="outline-text-2" id="text-org9aa2fcd">
+<div id="outline-container-org6892516" class="outline-2">
+<h2 id="org6892516">ペリカンのテーマを設定する</h2>
+<div class="outline-text-2" id="text-org6892516">
 </div>
-<div id="outline-container-org6cf476c" class="outline-3">
-<h3 id="org6cf476c">ペリカンのテーマを確認</h3>
-<div class="outline-text-3" id="text-org6cf476c">
+<div id="outline-container-orgc8e48c6" class="outline-3">
+<h3 id="orgc8e48c6">ペリカンのテーマを確認</h3>
+<div class="outline-text-3" id="text-orgc8e48c6">
 <p>
 　<a href="http://www.pelicanthemes.com/">ペリカンのテーマ一覧</a>を確認し、
 <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a>
@@ -316,9 +316,9 @@ optional arguments:
 </div>
 
 
-<div id="outline-container-org447995b" class="outline-3">
-<h3 id="org447995b">ブログにテーマの適用</h3>
-<div class="outline-text-3" id="text-org447995b">
+<div id="outline-container-org5345468" class="outline-3">
+<h3 id="org5345468">ブログにテーマの適用</h3>
+<div class="outline-text-3" id="text-org5345468">
 <p>
 以下のディレクトリで、以下のコマンドを実行して
 テーマのインストールを行う。
@@ -346,13 +346,13 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 </div>
 </div>
 
-<div id="outline-container-org53486e4" class="outline-2">
-<h2 id="org53486e4">ペリカンのプラグイン設定する</h2>
-<div class="outline-text-2" id="text-org53486e4">
+<div id="outline-container-org41e6989" class="outline-2">
+<h2 id="org41e6989">ペリカンのプラグイン設定する</h2>
+<div class="outline-text-2" id="text-org41e6989">
 </div>
-<div id="outline-container-org52270a4" class="outline-3">
-<h3 id="org52270a4">Org-modeで記事を書く</h3>
-<div class="outline-text-3" id="text-org52270a4">
+<div id="outline-container-orgdd3d589" class="outline-3">
+<h3 id="orgdd3d589">Org-modeで記事を書く</h3>
+<div class="outline-text-3" id="text-orgdd3d589">
 <p>
 　EmacsのOrg-mode記法で記事を書くために設定ファイル
 (<code>pelicanconf.py</code>)に以下を記載する。
@@ -366,9 +366,9 @@ ORG_READER_EMACS_LOCATION = '/usr/bin/emacs'
 </div>
 </div>
 
-<div id="outline-container-org863a04d" class="outline-2">
-<h2 id="org863a04d">GitHub Pagesでブログを公開する</h2>
-<div class="outline-text-2" id="text-org863a04d">
+<div id="outline-container-org66ac959" class="outline-2">
+<h2 id="org66ac959">GitHub Pagesでブログを公開する</h2>
+<div class="outline-text-2" id="text-org66ac959">
 <p>
 　ブログをホスティングするために、
 <a href="https://github.com/masatotoro/blog">ブログ用のリポジトリ</a>を用意し
@@ -377,9 +377,9 @@ GitHub Pagesで公開できるようにする。
 </div>
 
 
-<div id="outline-container-org87f0bf3" class="outline-3">
-<h3 id="org87f0bf3">手動で動作確認</h3>
-<div class="outline-text-3" id="text-org87f0bf3">
+<div id="outline-container-org7b0af26" class="outline-3">
+<h3 id="org7b0af26">手動で動作確認</h3>
+<div class="outline-text-3" id="text-org7b0af26">
 <p>
 　<a href="http://docs.getpelican.com/en/stable/tips.html#publishing-to-github">GitHubに公開する方法</a>を参考に以下のコマンドを実行する。
 </p>
@@ -403,9 +403,9 @@ git push origin gh-pages
 </div>
 
 
-<div id="outline-container-org1f21f7b" class="outline-3">
-<h3 id="org1f21f7b">Makefileを編集</h3>
-<div class="outline-text-3" id="text-org1f21f7b">
+<div id="outline-container-org6cb47f3" class="outline-3">
+<h3 id="org6cb47f3">Makefileを編集</h3>
+<div class="outline-text-3" id="text-org6cb47f3">
 <p>
 　Github Pageに簡単に公開できるようにするために、Makefileのターゲットを追加する。
 </p>
@@ -487,8 +487,11 @@ git push origin gh-pages
     <li class="list-group-item tag-4">
       <a href="../tag/goemon.html">Goemon</a>
     </li>
-    <li class="list-group-item tag-4">
+    <li class="list-group-item tag-2">
       <a href="../tag/java.html">Java</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="../tag/jdk12.html">JDK12</a>
     </li>
     <li class="list-group-item tag-0">
       <a href="../tag/org-mode.html">Org-mode</a>
@@ -501,9 +504,6 @@ git push origin gh-pages
     </li>
     <li class="list-group-item tag-4">
       <a href="../tag/sphinx.html">Sphinx</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="../tag/spring-boot.html">Spring Boot</a>
     </li>
   </ul>
 </li>

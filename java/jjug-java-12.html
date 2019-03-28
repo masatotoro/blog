@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>JJUGナイトセミナー「Java 12リリース記念！」へ参加 - ぺりかんブログ</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="../java/jjug-java-12.html">
+
+        <meta name="author" content="masatotoro" />
+        <meta name="keywords" content="Java,JDK12" />
+        <meta name="description" content="Java 12について勉強した内容を記録" />
+
+        <meta property="og:site_name" content="ぺりかんブログ" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="JJUGナイトセミナー「Java 12リリース記念！」へ参加"/>
+        <meta property="og:url" content="../java/jjug-java-12.html"/>
+        <meta property="og:description" content="Java 12について勉強した内容を記録"/>
+        <meta property="article:published_time" content="2019-03-28" />
+            <meta property="article:section" content="java" />
+            <meta property="article:tag" content="Java" />
+            <meta property="article:tag" content="JDK12" />
+            <meta property="article:author" content="masatotoro" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">
+ぺりかんブログ            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="../pages/about.html">
+                             About
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href=".." title="ぺりかんブログ"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="../category/java.html" title="java">java</a></li>
+                <li class="active">JJUGナイトセミナー「Java 12リリース記念！」へ参加</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="../java/jjug-java-12.html"
+                       rel="bookmark"
+                       title="Permalink to JJUGナイトセミナー「Java 12リリース記念！」へ参加">
+                        JJUGナイトセミナー「Java 12リリース記念！」へ参加
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2019-03-28T00:00:00+09:00"> 2019-03-28 (木)</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="../tag/java.html">Java</a>
+        /
+	<a href="../tag/jdk12.html">JDK12</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <div id="table-of-contents">
+<h2>&#30446;&#27425;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcfe8afa">JDK12で新しく導入される言語機能とAPI</a>
+<ul>
+<li><a href="#org77a42e4">swith構文の拡張</a></li>
+<li><a href="#org04d39f1">JVM Constants API</a></li>
+<li><a href="#org3d64c5c">実装時に使いそうな新機能</a></li>
+<li><a href="#org6929207">JDK13に入りそうなもの</a></li>
+</ul>
+</li>
+<li><a href="#orgf78632b">JDK12新機能解説</a>
+<ul>
+<li><a href="#orge83ee71">ZGCって何</a></li>
+<li><a href="#org5c3cd8c">ZGCの特徴</a></li>
+<li><a href="#org83aae9c">パフォーマンス</a></li>
+<li><a href="#org148edca">チューニング</a></li>
+<li><a href="#org46c054b">ログ出力</a></li>
+<li><a href="#orgc3083d5">ロードマップ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcfe8afa" class="outline-2">
+<h2 id="orgcfe8afa">JDK12で新しく導入される言語機能とAPI</h2>
+<div class="outline-text-2" id="text-orgcfe8afa">
+<p>
+　<a href="https://twitter.com/kis">きしだ氏</a>によるJDK12で新しく導入される言語機能とAPIの紹介があった。
+Qiitaの記事(<a href="https://qiita.com/nowokay/items/0e860819b6ffb1aca90a">Java12新機能まとめ</a>)も交え、解説があった。
+JDK12にはプログラムを書く上で大きな変更は入っていないとのこと。
+</p>
+</div>
+
+<div id="outline-container-org77a42e4" class="outline-3">
+<h3 id="org77a42e4">swith構文の拡張</h3>
+<div class="outline-text-3" id="text-org77a42e4">
+<p>
+　本機能はpreviw機能なので、まだ暫定とのこと。
+まだ、お仕事で使わないように気を付ける必要あり。
+コンパイル時に <code>--enable-preview</code> を指定しなければ利用できないので、
+とりあえず安心。
+</p>
+
+<p>
+　アロー構文でswitch分を書くことができる。
+そして、 <code>break</code> が不要になる。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="font-weight: bold; text-decoration: underline;">String</span> <span style="font-weight: bold; font-style: italic;">time</span> = <span style="font-weight: bold;">switch</span> (weekday) {
+  <span style="font-weight: bold;">case</span> MONDAY, FRIDAY -&gt; <span style="font-style: italic;">"10:00-18:00"</span>;
+  <span style="font-weight: bold;">case</span> TUESDAY, THURSDAY -&gt; <span style="font-style: italic;">"10:00-14:00"</span>;
+  <span style="font-weight: bold;">default</span> -&gt; <span style="font-style: italic;">"&#20241;&#26085;"</span>;
+};
+</pre>
+</div>
+
+
+<p>
+　また、 <code>break</code> に返り値を設定することもできるようになりそう。
+ここは、まだ揺らぐ可能性が高い。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="font-weight: bold; text-decoration: underline;">String</span> <span style="font-weight: bold; font-style: italic;">time</span> = <span style="font-weight: bold;">switch</span> (weekday) {
+  <span style="font-weight: bold;">case</span> MONDAY, FRIDAY -&gt;  {
+    <span style="font-weight: bold; text-decoration: underline;">var</span> <span style="font-weight: bold; font-style: italic;">endTime</span> = getEndTime();
+    <span style="font-weight: bold;">break</span> <span style="font-style: italic;">"10:00-"</span> + endTime;
+  }
+  <span style="font-weight: bold;">case</span> TUESDAY, THURSDAY -&gt; <span style="font-style: italic;">"10:00-14:00"</span>;
+  <span style="font-weight: bold;">default</span> -&gt; <span style="font-style: italic;">"&#20241;&#26085;"</span>;
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org04d39f1" class="outline-3">
+<h3 id="org04d39f1">JVM Constants API</h3>
+<div class="outline-text-3" id="text-org04d39f1">
+<p>
+　パッケージ(<code>java.lang.constant</code> )に追加された。
+リフレクションで色々とやるときに便利になるとのこと。
+</p>
+</div>
+</div>
+<div id="outline-container-org3d64c5c" class="outline-3">
+<h3 id="org3d64c5c">実装時に使いそうな新機能</h3>
+<div class="outline-text-3" id="text-org3d64c5c">
+<ul class="org-ul">
+<li><code>Collectors.teeing</code>
+<ul class="org-ul">
+<li>二つのCollectorを使いたいときに利用する。</li>
+</ul></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">&#12371;&#12371;&#12398;&#12469;&#12531;&#12503;&#12523;&#12434;&#26360;&#12365;&#12365;&#12428;&#12394;&#12363;&#12387;&#12383;&#12290;</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">String str = Stream.of("aa","bb").collect(Collectors)</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>String.transform</code>
+<ul class="org-ul">
+<li>直観的に値を取得できるような気がする。</li>
+</ul></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="font-weight: bold; text-decoration: underline;">var</span> <span style="font-weight: bold; font-style: italic;">address</span>    = Map.of(<span style="font-style: italic;">"john"</span>,<span style="font-style: italic;">"tokyo"</span>,<span style="font-style: italic;">"mike"</span>,<span style="font-style: italic;">"fukuoka"</span>);
+<span style="font-weight: bold; text-decoration: underline;">var</span> <span style="font-weight: bold; font-style: italic;">population</span> = Map.of(<span style="font-style: italic;">"tokyo"</span>, 30000000, <span style="font-style: italic;">"fukuoka"</span>, 2000000);
+<span style="font-style: italic;">"john"</span>.transform(addresses::get).transform(population::get)
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>String.indent</code>
+<ul class="org-ul">
+<li>インデントを入れることができる。</li>
+<li>マイナスの値も入れることができる。</li>
+</ul></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="font-style: italic;">"123\n456"</span>.indent(2)
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">"  123\n  456\n"</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>CompactNumberFormat</code>
+<ul class="org-ul">
+<li>ロケールに応じて、数字を丸めてくれる。</li>
+</ul></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="font-weight: bold; text-decoration: underline;">var</span> <span style="font-weight: bold; font-style: italic;">cnf</span> = NumberFormat.getCompactNumberInstance();
+cnf.format(10000_0000); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">"1&#20740;"</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>InputStream.skipNBytes</code>
+<ul class="org-ul">
+<li>指定したバイトだけスキップすることができる。</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6929207" class="outline-3">
+<h3 id="org6929207">JDK13に入りそうなもの</h3>
+<div class="outline-text-3" id="text-org6929207">
+<p>
+　すべては未確定。
+</p>
+
+<ul class="org-ul">
+<li>Switch式の正式化</li>
+<li>JPackage (熱く議論されている☆彡)
+<ul class="org-ul">
+<li>インストーラーを配布するパッケージ
+<ul class="org-ul">
+<li><a href="http://nowokay.hatenablog.com/entry/2019/03/07/085905">jpackageでJavaアプリのインストーラーを作る</a></li>
+</ul></li>
+</ul></li>
+<li>Raw String Literalsの復活
+<ul class="org-ul">
+<li>正直、よく分からなかった。</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf78632b" class="outline-2">
+<h2 id="orgf78632b">JDK12新機能解説</h2>
+<div class="outline-text-2" id="text-orgf78632b">
+<p>
+　<a href="https://twitter.com/davidbuckjp">David Buck</a>氏によるZGCの解説をいただく。
+</p>
+</div>
+
+<div id="outline-container-orge83ee71" class="outline-3">
+<h3 id="orge83ee71">ZGCって何</h3>
+<div class="outline-text-3" id="text-orge83ee71">
+<p>
+　JDK11以降の新しいGCの実装のこと。
+A Scalable Low-Latency Garbage Collector。
+</p>
+
+<p>
+　複数のTBのヒープに対応でき、
+10ms以下の停止時間を目指し、
+チューニングが楽で、
+15%以下のオーバーヘッド。
+</p>
+
+<ul class="org-ul">
+<li>"Z" GC
+<ul class="org-ul">
+<li>"ZFS(Zettabyte(==1000^7 byte: 10億) File System)"</li>
+</ul></li>
+<li>Zettabyte != Zebibyte</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5c3cd8c" class="outline-3">
+<h3 id="org5c3cd8c">ZGCの特徴</h3>
+<div class="outline-text-3" id="text-org5c3cd8c">
+<p>
+　ヒープと生存データのサイズが停止時間に影響を及ぼさない。
+ルート参照(ヒープの外からヒープへのアクセス)の数が停止時間に影響を及ぼす。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org83aae9c" class="outline-3">
+<h3 id="org83aae9c">パフォーマンス</h3>
+<div class="outline-text-3" id="text-org83aae9c">
+<ul class="org-ul">
+<li>メモリ128GBで2ms以下のGC Time</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org148edca" class="outline-3">
+<h3 id="org148edca">チューニング</h3>
+<div class="outline-text-3" id="text-org148edca">
+<ul class="org-ul">
+<li><code>-Xmx&lt;size&gt;</code></li>
+<li>(必要に応じて) <code>-XX:ConcGCThreads=&lt;number&gt;</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org46c054b" class="outline-3">
+<h3 id="org46c054b">ログ出力</h3>
+<div class="outline-text-3" id="text-org46c054b">
+<ul class="org-ul">
+<li><code>-Xlog:gc</code></li>
+<li><code>-Xlog:gc*</code></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgc3083d5" class="outline-3">
+<h3 id="orgc3083d5">ロードマップ</h3>
+<div class="outline-text-3" id="text-orgc3083d5">
+<ul class="org-ul">
+<li>短期
+<ul class="org-ul">
+<li>正式サポート</li>
+</ul></li>
+<li>長期
+<ul class="org-ul">
+<li>世代別</li>
+<li>1ms以下の停止時間</li>
+<li>他のプラットフォームのサポート</li>
+<li>Graal JITの対応</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/masatotoro_tw"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/masatotoro"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="../category/book.html"><i class="fa fa-folder-open fa-lg"></i>book</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../category/emacs.html"><i class="fa fa-folder-open fa-lg"></i>emacs</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../category/go.html"><i class="fa fa-folder-open fa-lg"></i>go</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../category/java.html"><i class="fa fa-folder-open fa-lg"></i>java</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../category/pandoc.html"><i class="fa fa-folder-open fa-lg"></i>pandoc</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../category/pelican.html"><i class="fa fa-folder-open fa-lg"></i>pelican</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../category/sphinx.html"><i class="fa fa-folder-open fa-lg"></i>sphinx</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="../"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+  <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-2">
+      <a href="../tag/blog.html">Blog</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="../tag/emacs.html">Emacs</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="../tag/go.html">Go</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="../tag/goemon.html">Goemon</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="../tag/java.html">Java</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="../tag/jdk12.html">JDK12</a>
+    </li>
+    <li class="list-group-item tag-0">
+      <a href="../tag/org-mode.html">Org-mode</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="../tag/pandoc.html">Pandoc</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="../tag/pelican.html">Pelican</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="../tag/sphinx.html">Sphinx</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://qiita.com/masatotoro" target="_blank">Qiita</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://b.hatena.ne.jp/masatotoro/" target="_blank">はてなブックマーク</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 まさととろ
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="../theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="../theme/js/respond.min.js"></script>
+
+
+
+
+</body>
+</html>
